@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Quản lý Giáo viên và Chuyến đi</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Quản lý Giáo viên và Chuyến đi</h1>
+
+    <!-- Form để tạo Giáo viên -->
+    <div id="createTeacherForm" class="form-container">
+      <h2>Tạo Giáo viên</h2>
+      <!-- Các trường thông tin -->
+      <input type="text" id="teacherCode" placeholder="Mã giáo viên">
+      <input type="text" id="fullName" placeholder="Họ tên giáo viên">
+      <input type="text" id="phone" placeholder="Số điện thoại">
+      <input type="text" id="email" placeholder="Email">
+      <!-- Nút tạo Giáo viên -->
+      <button onclick="createTeacher()">Tạo Giáo viên</button>
+    </div>
+
+    <!-- Danh sách Giáo viên -->
+    <div id="teacherList" class="list-container">
+      <h2>Danh sách Giáo viên</h2>
+      <ul id="teacherUl"></ul>
+    </div>
+
+    <!-- Form tạo Chuyến đi -->
+    <div id="createTripForm" class="form-container">
+      <h2>Tạo Chuyến đi</h2>
+      <!-- Các trường thông tin -->
+      <input type="text" id="tripCode" placeholder="Mã chuyến đi">
+      <input type="text" id="departureDate" placeholder="Ngày xuất phát">
+      <!-- ...  -->
+
+      <!-- Nút tạo Chuyến đi -->
+      <button onclick="createTrip()">Tạo Chuyến đi</button>
+    </div>
+
+    <!-- Danh sách Chuyến đi -->
+    <div id="tripList" class="list-container">
+      <h2>Danh sách Chuyến đi</h2>
+      <ul id="tripUl"></ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
