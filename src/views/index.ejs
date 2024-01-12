@@ -1,0 +1,43 @@
+<!-- header -->
+    <%- include('include/_header') %>
+<!-- header -->
+
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <a href="/add-trip" class="border-shadow">
+                    <span class="text-gradient">Tạo Chuyến Xe <i class="fas fa-trip"></i></span>
+                </a>
+            </div>
+
+            <!-- danh sách chuyến xe -->
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Nơi xuất phát</th>
+                            <th>Ngày xuất phát</th>
+                            <th>Giờ xuất phát</th>
+                            <th>Nơi đến</th>
+                            <th>Ngày đến</th>
+                            <th>Giờ đến</th>
+                            <th>Tổng số chỗ</th>
+                            <th>Số chỗ trống</th>
+                            <th>SDT liên hệ</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%- include('include/_show') %>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </main>
+
+
+
+<!-- footer -->
+<%- include('include/_footer') %>
+<!-- footer -->

@@ -1,0 +1,22 @@
+<% for(var i = 0; i < trips.length; i++) { %>
+<tr>
+    <td><%= i + 1 %></td>
+    <td><%= trips[i].noi_xuat_phat %></td>
+    <td><%= trips[i].ngay_xuat_phat %></td>
+    <td><%= trips[i].gio_xuat_phat %></td>
+    <td><%= trips[i].noi_den %></td>
+    <td><%= trips[i].ngay_den %></td>
+    <td><%= trips[i].gio_den %></td>
+    <td><%= trips[i].tong_so_cho %></td>
+    <td><%= trips[i].so_cho_trong %></td>
+    <td><%= trips[i].sdt_lien_he %></td>
+    <td>
+        <a href="/update-trip?id=<%= trips[i]._id%>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+        </a>
+        <a class="btn border-shadow delete" data-id=<%= trips[i]._id%> >
+            <span class="text-gradient"><i class="fas fa-times"></i></span>
+        </a>
+    </td>
+</tr>
+<% } %>

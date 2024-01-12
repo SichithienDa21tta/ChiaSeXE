@@ -1,0 +1,70 @@
+<!-- header -->
+<%- include('include/_header') %>
+<!-- header -->
+
+  <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+           <div class="filter">
+               <a href="/home"><i class="fas fa-angle-double-left"></i> Tất Cả Chuyến Xe</a>
+           </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Cập Nhật Chuyến Xe</h2>
+            <span class="text-light">Hãy điền thông tin cập nhật cho chuyến xe</span>
+        </div>
+
+         <!-- form -->
+ <form method="POST" id="update_trip">
+    <div class="new_trip">
+        <div class="form-group">
+            <label for="Noi_xuat_phat" class="text-light">Nơi xuất phát</label>
+            <input type="hidden" name="id" value="<%= trips._id %>">
+            <input type="text" name="noi_xuat_phat" value="<%= trips.noi_xuat_phat %>">
+        </div>
+        <div class="form-group">
+            <label for="Ngay_xuat_phat" class="text-light">Ngày xuất phát</label>
+            <input type="text" name="ngay_xuat_phat" value="<%= trips.ngay_xuat_phat %>">
+        </div>
+        <div class="form-group">
+            <label for="Gio_xuat_phat" class="text-light">Giờ xuất phát</label>
+            <input type="text" name="gio_xuat_phat" value="<%= trips.gio_xuat_phat %>">
+        </div>
+        <div class="form-group">
+            <label for="Noi_den" class="text-light">Nơi đến</label>
+            <input type="text" name="noi_den" value="<%= trips.noi_den %>">
+        </div>
+        <div class="form-group">
+            <label for="Ngay_den" class="text-light">Ngày đến</label>
+            <input type="text" name="ngay_den" value="<%= trips.ngay_den %>">
+        </div>
+        <div class="form-group">
+            <label for="Gio_den" class="text-light">Giờ đến</label>
+            <input type="text" name="gio_den" value="<%= trips.gio_den %>">
+        </div>
+        <div class="form-group">
+            <label for="Tong_so_cho" class="text-light">Tổng số chỗ</label>
+            <input type="text" name="tong_so_cho" value="<%= trips.tong_so_cho %>">
+        </div>
+        <div class="form-group">
+            <label for="So_cho_trong" class="text-light">Số chỗ trống</label>
+            <input type="text" name="so_cho_trong" value="<%= trips.so_cho_trong %>">
+        </div>
+        <div class="form-group">
+            <label for="Sdt_lien_he" class="text-light">SDT liên hệ</label>
+            <input type="text" name="sdt_lien_he" value="<%= trips.sdt_lien_he %>">
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Cập Nhật</button>
+        </div>
+
+    </div>
+</form>
+       
+    </div>
+</main>
+
+<!-- footer -->
+<%- include('include/_footer') %>
+<!-- footer -->
